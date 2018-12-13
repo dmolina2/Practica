@@ -1,0 +1,101 @@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    1
+User:    HOU50MF                                     Profile Information                                            Date:  7/06/16
+                                                               CLOR85                                               Time:  9:21:59
+Profile Id . . . . . . : CLOR85             Company Description. . : CLOROX-CHILE
+Start Date . . . . . . : 11/01/2015
+End Date . . . . . . . : 12/31/9999
+Version  . . . . . . . :   2                Low Fare > Gross Fare  :                    Complex Cnt. . . . . . : 00
+OU ID  . . . . . . . . :                    Full Fare < Gross Amt  :                    Default Refund Fares . : N
+Country Grouping . . . : CHILE              PTSI Client. . . . . . : N                  AIM Indicators . . . . :
+Profile Id . . . . . . : CLOR85             Company Description. . : CLOROX-CHILE
+                                                                                                                                   .
+______________________ Hotel/Car Info_______________________________________________________ Explanation Defaults___________________
+Default Hotel Rate       0       Max Hotel Rat          .00                     Air       Car      Hotel      Rail    Refund
+DEFAULT Car Rate         0       Max Car Rate           .00                                                             *
+Profile Id . . . . . . : CLOR85             Company Description. . : CLOROX-CHILE
+                                                                                                                                   .
+__________________Mapping Information __________________________________________________________
+Source   Nmbr      Pattern                                     Str  End  Field       Description               Usage   CF#
+UDID        1       n@                                           1   25  SAP ID      SAP ID                      S      1
+UDID        2       ?@                                           1   26  COSCTN      COST CTR NAME               S      3
+UDID        3       nnnnn                                        1    5  COSTST      COST CTR                    S      2
+UDID        4       ?@                                           1   40  RONTVL      REASON FOR TVL              S      4
+UDID        5       ba@                                          1   40  OTPOJT      OUTSIDE POLTICL JUSTFICTN   S      5
+UDID        6       bnnonnonnnn                                  1   10  CRDTVL      CREATION DATE OF TRAVEL     S      6
+UDID        7       baaa                                         1    3  NOTOL       NO TOL TOL OR ONLY MASK     S      7
+UDID        8       ?@                                           1   40  UDUD08                                  S      8
+FARES       1                                                    1    1  LOFARE      LOW FARE
+FARES       2                                                    1    1  FLFARE      FULL FARE
+                                                                                                                                   .
+___________________Edit Patterns Without Mapping________________________________________________
+Source   Nmbr      Pattern
+                                                                                                                                   .
+________________________Explanation Codes_______________________________________________________
+       Type     Code                               Description                                     Policy     Operator
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    2
+User:    HOU50MF                                     Profile Information                                            Date:  7/06/16
+                                                               CLOR85                                               Time:  9:21:59
+          A      AA            ACCEPTED LOWEST FARE
+          A      AB            FIRST CLASS/BUSSINES CLASS APPLIED
+          A      AC            NON RESTRICTIVE FARE REQUIRED
+          A      AD            SPECIAL FARE FOR UP-GRADE
+          A      AE            PSGR DOES NOT ACCEPT LOWEST FARE ALTERNATIVE
+          A      AF            ITIN DOES NOT HAVE ADVANCE PURCH/MIN/MAX STA
+          A      AG            RESERVATION MADE WITHIN 24 HOURS BEFORE DEPARTURE
+          A      AH            FARE WITH CORPORATE DISCOUNT
+          A      AI            REISSUED TICKET
+          A      AJ            MCO OR REWARD TICKET
+          A      AK            WAIVED FEE
+          A      AL            HIGH SEASON RATE
+          A      AM            FEE ON CHANGES
+          A      AN            VTP/GRAND PLAN OR FIT
+          A      A0            DECLINED LOWEST FARE DUE TO PREFERRED AIRLINE
+          A      A1            DECLINED LOWEST FARE DUE TO FREQUENT FLYER MILES
+          A      A2            DECLINED LOWEST FARE DUE TO ITINERARY
+          A      A3            DECLINED LOWEST FARE DUE TO NUMBER OF FLIGHTS
+          A      A4            DECLINED LOWEST FARE DUE TO DIRECT ROUTE
+          A      A7            DECLINED LOWEST FARE DUE TO TIME LIMIT NOT ACCEPTE
+          A      B1            UPGRADE TO OTHER CLASS COACH TO BUSINESS
+          A      B2            UPGRADE TO OTHER CLASS BUSINESS TO FIRST
+          A      D1            PASSENGER REJECTED NON FARE TKT FROM CORP AGREEMEN
+          A      EA            DECLINED LOWEST FARE
+          A      E1            PASSENGER REQUESTED TKT WITH OPEN SEGMENTS
+          A      F1            PASSENDER REQUESTED NON RESTRICTION FARE
+          A      GA            ACCEPTED LOWEST FARE
+          A      U             DECLINED DUE TO AIRLINE PREFERENCE
+          C      Y0            PASSENGER CHOSE HIGHER RATE CAR
+          C      Y1            PASSENGER CHOSE LOWER RATE CAR
+          H      HA            IN POLICY
+          H      NA            NO HOTEL BOOKED
+          H      XA            OUT OF POLICY
+          H      XX            PASSENGER CHOSE HIGHER RATE HOTEL
+          H      X0            PASSENGER CHOSE LOWER RATE HOTEL
+                                                                                                                                   .
+________________________Valid/Invalid Values____________________________________________________
+Field     Type      Comparison  Values
+                                                                                                                                   .
+________________________Customer Grouping Detail________________________________________________
+  Order Type     Seq   Start   End   Field ID   CF#  Custom Field Description
+                                                                                                                                   .
+________________________Translation Field Definition____________________________________________
+  Type   Seq   Start   End   Field ID   CF#     Custom Field Description
+                                                                                                                                   .
+_____________________________________Edit Pattern_______________________________________________
+ Map ID        Map Desc                       Edit Pattern
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    3
+User:    HOU50MF                                     Profile Information                                            Date:  7/06/16
+                                                               CLOR85                                               Time:  9:21:59
+  D01 -         UDR-1                         :n@
+  D02 -         UDR-2                         :?@
+  D03 -         UDR-3                         :nnnnn
+  D04 -         UDR-4                         :?@
+  D05 -         UDR-5                         :ba@
+  D06 -         UDR-6                         :bnnonnonnnn
+  D07 -         UDR-7                         :baaa
+  D08 -         UDR-8                         :?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    4
+User:    HOU50MF                                     Profile Information                                            Date:  7/06/16
+                                                               CLOR85                                               Time:  9:21:59
+________________________Preferred Vendor details________________________________________________
+ Vendor Type     Vendor Code                     Description                              Machine ID     Start Date       End Date
+

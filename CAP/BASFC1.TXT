@@ -1,0 +1,128 @@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    1
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BASFC1                                               Time: 11:55:44
+Profile Id . . . . . . : BASFC1             Company Description. . : BASF CHILE
+Start Date . . . . . . :  1/01/2017
+End Date . . . . . . . : 12/31/9999
+Version  . . . . . . . :   2                Low Fare > Gross Fare  : P                  Complex Cnt. . . . . . : 00
+OU ID  . . . . . . . . :                    Full Fare < Gross Amt  : F                  Default Refund Fares . : N
+Country Grouping . . . : CHILE              PTSI Client. . . . . . : N                  AIM Indicators . . . . :
+Profile Id . . . . . . : BASFC1             Company Description. . : BASF CHILE
+                                                                                                                                   .
+______________________ Hotel/Car Info_______________________________________________________ Explanation Defaults___________________
+Default Hotel Rate       0       Max Hotel Rat          .00                     Air       Car      Hotel      Rail    Refund
+DEFAULT Car Rate         0       Max Car Rate           .00                                                             *
+Profile Id . . . . . . : BASFC1             Company Description. . : BASF CHILE
+                                                                                                                                   .
+__________________Mapping Information __________________________________________________________
+Source   Nmbr      Pattern                                     Str  End  Field       Description               Usage   CF#
+UDID        1       nnnn                                         1    3  COMPNU      COMPANY NUMBER              S      3
+UDID        2       nnnnnnnn                                     1    8  EMPID       EMPLOYEE ID                 S      1
+UDID        3       xxxxxxxx                                     1    4  TVLCTR      TRAVELER CATEGORY           S      4
+UDID        4       xxxxxxxx                                     1    8  HOMECC                                  S      2
+UDID        5       xbx@                                         1   30  SITE        SITE                        S      5
+UDID        6       a                                            1    1  REASTV      REASON FOR TRAVEL           S      6
+UDID        7       a                                            1    1  NOHTL       NO HOTEL BOOKED CODE        S      7
+FARES       1                                                    1    1  LOFARE      LOW FARE
+FARES       2                                                    1    1  FLFARE      FULL FARE
+                                                                                                                                   .
+___________________Edit Patterns Without Mapping________________________________________________
+Source   Nmbr      Pattern
+UDID        8       ?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    2
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BASFC1                                               Time: 11:55:44
+UDID        9       ?@
+UDID       10       ?@
+GOVERNMENT  1       ?@
+GOVERNMENT  2       ?@
+GOVERNMENT  3       ?@
+GOVERNMENT  4       ?@
+GOVERNMENT  5       ?@
+GOVERNMENT  6       ?@
+GOVERNMENT  7       ?@
+GOVERNMENT  8       ?@
+GOVERNMENT  9       ?@
+DK NAME     1       ?@
+SORT        1       ?@
+SORT        2       ?@
+SORT        3       ?@
+SORT        4       ?@
+SORT        5       ?@
+SORT        6       ?@
+SORT        7       ?@
+SORT        8       ?@
+SORT        9       ?@
+STATEMENT   1       ?@
+                                                                                                                                   .
+________________________Explanation Codes_______________________________________________________
+       Type     Code                               Description                                     Policy     Operator
+          A      AA            LOWEST FARE APPLIED
+          A      AB            FIRST CLASS/BUSSINES CLASS APPLIED
+          A      AC            NON RESTRICTIVE FARE REQUIRED
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    3
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BASFC1                                               Time: 11:55:44
+          A      AD            SPECIAL FARE FOR UP-GRADE
+          A      AE            PSGR DOES NOT ACCEPT LOWEST FARE ALTERNATIVE OFFER
+          A      AF            ITIN DOES NOT HAVE ADVANCE PURCH/MIN/MAX STAY REQ.
+          A      AG            RESERVATION MADE WITHIN 24 HOURS BEFORE DEPARTURE
+          A      AH            FARE WITH CORPORATE DISCOUNT
+          A      AI            REISSUED TICKET
+          A      AJ            MCO OR REWARD TICKET
+          A      AK            WAIVED FEE
+          A      AL            HIGH SEASON RATE
+          A      AM            FEE ON CHANGES
+          A      AN            VTP/GRAND PLAN OR FIT
+          A      LA            LOWEST FARE ACCEPTED
+                                                                                                                                   .
+________________________Valid/Invalid Values____________________________________________________
+Field     Type      Comparison  Values
+                                                                                                                                   .
+________________________Customer Grouping Detail________________________________________________
+  Order Type     Seq   Start   End   Field ID   CF#  Custom Field Description
+                                                                                                                                   .
+________________________Translation Field Definition____________________________________________
+  Type   Seq   Start   End   Field ID   CF#     Custom Field Description
+                                                                                                                                   .
+_____________________________________Edit Pattern_______________________________________________
+ Map ID        Map Desc                       Edit Pattern
+  D01 -         UDR-1                         :nnnn
+  D02 -         UDR-2                         :nnnnnnnn
+  D03 -         UDR-3                         :xxxxxxxx
+  D04 -         UDR-4                         :xxxxxxxx
+  D05 -         UDR-5                         :xbx@
+  D06 -         UDR-6                         :a
+  D07 -         UDR-7                         :a
+  D08 -         UDR-8                         :?@
+  D09 -         UDR-9                         :?@
+  D10 -         UDR-10                        :?@
+  G01 -         GOVERNMT-1                    :?@
+  G02 -         GOVERNMT-2                    :?@
+  G03 -         GOVERNMT-3                    :?@
+  G04 -         GOVERNMT-4                    :?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    4
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BASFC1                                               Time: 11:55:44
+  G05 -         GOVERNMT-5                    :?@
+  G06 -         GOVERNMT-6                    :?@
+  G07 -         GOVERNMT-7                    :?@
+  G08 -         GOVERNMT-8                    :?@
+  G09 -         GOVERNMT-9                    :?@
+  N01 -         DK NAME                       :?@
+  O01 -         SORT-1                        :?@
+  O02 -         SORT-2                        :?@
+  O03 -         SORT-3                        :?@
+  O04 -         SORT-4                        :?@
+  O05 -         SORT-5                        :?@
+  O06 -         SORT-6                        :?@
+  O07 -         SORT-7                        :?@
+  O08 -         SORT-8                        :?@
+  O09 -         SORT-9                        :?@
+  S01 -         STATEMENT                     :?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    5
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BASFC1                                               Time: 11:55:44
+________________________Preferred Vendor details________________________________________________
+ Vendor Type     Vendor Code                     Description                              Machine ID     Start Date       End Date
+

@@ -1,0 +1,118 @@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    1
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               CATG85                                               Time: 11:57:47
+Profile Id . . . . . . : CATG85             Company Description. . : CA TECH CHILE
+Start Date . . . . . . :  4/01/2017
+End Date . . . . . . . : 12/31/9999
+Version  . . . . . . . :   4                Low Fare > Gross Fare  :                    Complex Cnt. . . . . . : 10
+OU ID  . . . . . . . . :                    Full Fare < Gross Amt  :                    Default Refund Fares . : N
+Country Grouping . . . : CHILE              PTSI Client. . . . . . : Y                  AIM Indicators . . . . :
+Profile Id . . . . . . : CATG85             Company Description. . : CA TECH CHILE
+                                                                                                                                   .
+______________________ Hotel/Car Info_______________________________________________________ Explanation Defaults___________________
+Default Hotel Rate       0       Max Hotel Rat          .00                     Air       Car      Hotel      Rail    Refund
+DEFAULT Car Rate         0       Max Car Rate           .00                                                             *
+Profile Id . . . . . . : CATG85             Company Description. . : CA TECH CHILE
+                                                                                                                                   .
+__________________Mapping Information __________________________________________________________
+Source   Nmbr      Pattern                                     Str  End  Field       Description               Usage   CF#
+UDID        1       xxxxxxx                                      1    7  TVLID       TRAVELER ID.                S      1
+UDID        3       b?@                                          1   10  COSTCE      COST CENTER                 S      3
+UDID        5       b?@                                          1    2  TRIPPU      TRIP PURPOSE                S      5
+UDID        7       b?@                                          1    2  NOHTL       NO HOTEL BOOKED CODE        S      6
+UDID        9       b?@                                          1   40  MTGID                                   S      9
+FARES       1                                                    1    1  LOFARE      LOW FARE
+FARES       2                                                    1    1  FLFARE      FULL FARE
+GOVERNMENT  1       b?@                                          1    7  BKDATE      BOOKING DATE
+GOVERNMENT  7       b?@                                          1    2  NOTONL                                  S      8
+SORT        3       b?@                                          1   40  PROJCO      PROJECT CODE                S     14
+                                                                                                                                   .
+___________________Edit Patterns Without Mapping________________________________________________
+Source   Nmbr      Pattern
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    2
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               CATG85                                               Time: 11:57:47
+UDID        4       b?@
+UDID        6       b?@
+UDID       10       b?@
+GOVERNMENT  2       b?@
+GOVERNMENT  3       b?@
+GOVERNMENT  4       b?@
+GOVERNMENT  5       b?@
+GOVERNMENT  6       b?@
+GOVERNMENT  8       b?@
+GOVERNMENT  9       b?@
+SORT        1       b?@
+SORT        2       b?@
+SORT        4       b?@
+SORT        5       b?@
+SORT        6       b?@
+SORT        7       b?@
+SORT        8       b?@
+SORT        9       b?@
+STATEMENT   1       b?@
+                                                                                                                                   .
+________________________Explanation Codes_______________________________________________________
+       Type     Code                               Description                                     Policy     Operator
+          A      CA            DECLINED LOWER FARE DUE TO OTHER PREFERENCES
+          A      JA            ACCEPTED NEGOTIATED/CORPORATE FARE USED
+          A      LA            ACCEPTED LOWEST FARE WITHIN POLICY GUIDELINES
+          A      RA            DECLINED LOWER FARE DUE TO ALT ROUTE/CXN/AIRPORT
+          A      TA            DECLINED LOWER FARE DUE TO TIME CONSTRAINTS
+          A      XA            EXCHANGE
+          A      ZA            REFUND
+          H      AH            ACCEPTED AMEX RATE
+          H      MH            ATTENDING CONFERENCE/CONVENTION/TRADESHOW
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    3
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               CATG85                                               Time: 11:57:47
+          H      RH            DECLINED PREFERRED LOWER RATE CHOSEN
+          H      TH            DECLINED PREFERRED NEED SPECIFIC PROPERTY
+                                                                                                                                   .
+________________________Valid/Invalid Values____________________________________________________
+Field     Type      Comparison  Values
+                                                                                                                                   .
+________________________Customer Grouping Detail________________________________________________
+  Order Type     Seq   Start   End   Field ID   CF#  Custom Field Description
+                                                                                                                                   .
+________________________Translation Field Definition____________________________________________
+  Type   Seq   Start   End   Field ID   CF#     Custom Field Description
+                                                                                                                                   .
+_____________________________________Edit Pattern_______________________________________________
+ Map ID        Map Desc                       Edit Pattern
+  D01 -         UDR-1                         :xxxxxxx
+  D03 -         UDR-3                         :b?@
+  D04 -         UDR-4                         :b?@
+  D05 -         UDR-5                         :b?@
+  D06 -         UDR-6                         :b?@
+  D07 -         UDR-7                         :b?@
+  D09 -         UDR-9                         :b?@
+  D10 -         UDR-10                        :b?@
+  G01 -         GOVERNMT-1                    :b?@
+  G02 -         GOVERNMT-2                    :b?@
+  G03 -         GOVERNMT-3                    :b?@
+  G04 -         GOVERNMT-4                    :b?@
+  G05 -         GOVERNMT-5                    :b?@
+  G06 -         GOVERNMT-6                    :b?@
+  G07 -         GOVERNMT-7                    :b?@
+  G08 -         GOVERNMT-8                    :b?@
+  G09 -         GOVERNMT-9                    :b?@
+  O01 -         SORT-1                        :b?@
+  O02 -         SORT-2                        :b?@
+  O03 -         SORT-3                        :b?@
+  O04 -         SORT-4                        :b?@
+  O05 -         SORT-5                        :b?@
+  O06 -         SORT-6                        :b?@
+  O07 -         SORT-7                        :b?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    4
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               CATG85                                               Time: 11:57:47
+  O08 -         SORT-8                        :b?@
+  O09 -         SORT-9                        :b?@
+  S01 -         STATEMENT                     :b?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    5
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               CATG85                                               Time: 11:57:47
+________________________Preferred Vendor details________________________________________________
+ Vendor Type     Vendor Code                     Description                              Machine ID     Start Date       End Date
+

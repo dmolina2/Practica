@@ -1,0 +1,79 @@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    1
+User:    HOU50MF                                     Profile Information                                            Date:  2/21/17
+                                                               BSTN85                                               Time:  8:48:42
+Profile Id . . . . . . : BSTN85             Company Description. . : BOSTON CONSULTING GROUP
+Start Date . . . . . . :  3/01/2016
+End Date . . . . . . . : 12/31/9999
+Version  . . . . . . . :   4                Low Fare > Gross Fare  : P                  Complex Cnt. . . . . . : 00
+OU ID  . . . . . . . . :                    Full Fare < Gross Amt  : F                  Default Refund Fares . : N
+Country Grouping . . . : LAC=L              PTSI Client. . . . . . : N                  AIM Indicators . . . . :
+Profile Id . . . . . . : BSTN85             Company Description. . : BOSTON CONSULTING GROUP
+                                                                                                                                   .
+______________________ Hotel/Car Info_______________________________________________________ Explanation Defaults___________________
+Default Hotel Rate       0       Max Hotel Rat          .00                     Air       Car      Hotel      Rail    Refund
+DEFAULT Car Rate         0       Max Car Rate           .00                                                             ZA
+Profile Id . . . . . . : BSTN85             Company Description. . : BOSTON CONSULTING GROUP
+                                                                                                                                   .
+__________________Mapping Information __________________________________________________________
+Source   Nmbr      Pattern                                     Str  End  Field       Description               Usage   CF#
+UDID        1       bn@                                          1   15  EMP ID      EMPLOYEE ID                 S      5
+UDID        2       ba@                                          1   24  PTRRPR      PARTNER NON PARTNER         S     12
+UDID        3       bn@                                          1   15  COST C      COST CENTER
+UDID        4       ?@                                           1   20  CSSSDD      CASE CODE                   S      1
+UDID        5       a@                                           1    8  ONLOFF      ONLINE OFFLINE INDICATOR    S      3
+UDID        7       ba@                                          1    2  AIRRCO      AIR REASON CODE
+UDID        8       ba@                                          1    2  HOTRES      HOTEL REASON CODE
+UDID       10       a@                                           1   20  CNTRID      COUNTRY IDENTIFER           S     20
+FARES       1                                                    1    1  LOFARE      LOW FARE
+FARES       2                                                    1    1  FLFARE      FULL FARE
+                                                                                                                                   .
+___________________Edit Patterns Without Mapping________________________________________________
+Source   Nmbr      Pattern
+                                                                                                                                   .
+________________________Explanation Codes_______________________________________________________
+       Type     Code                               Description                                     Policy     Operator
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    2
+User:    HOU50MF                                     Profile Information                                            Date:  2/21/17
+                                                               BSTN85                                               Time:  8:48:42
+          A      DA            DECLINED DUE TO VENDOR PREFERENCE
+          A      EX            EXCHANGE
+          A      LA            LOWEST ACCEPTED WITHIN POLICY
+          A      PA            REFUSED DUE TO PENALTIES
+          A      TA            REFUSED DUE TO TIMING
+          A      UA            Y-UP
+          A      ZA            REFUND
+          C      Y0            PASSENGER CHOSE HIGHER RATE CAR
+          C      Y1            PASSENGER CHOSE LOWER RATE CAR
+          H      DH            DECLINED DUE TO VENDOR PREFERENCE                                                LT
+          H      HA            IN POLICY
+          H      LH            LOWEST ACCEPTED WITHIN POLICY                                                    EQ
+          H      NA            NO HOTEL BOOKED
+          H      XA            OUT OF POLICY
+          H      XX            PASSENGER CHOSE HIGHER RATE HOTEL
+          H      X0            PASSENGER CHOSE LOWER RATE HOTEL
+                                                                                                                                   .
+________________________Valid/Invalid Values____________________________________________________
+Field     Type      Comparison  Values
+                                                                                                                                   .
+________________________Customer Grouping Detail________________________________________________
+  Order Type     Seq   Start   End   Field ID   CF#  Custom Field Description
+                                                                                                                                   .
+________________________Translation Field Definition____________________________________________
+  Type   Seq   Start   End   Field ID   CF#     Custom Field Description
+                                                                                                                                   .
+_____________________________________Edit Pattern_______________________________________________
+ Map ID        Map Desc                       Edit Pattern
+  D01 -         UDR-1                         :bn@
+  D02 -         UDR-2                         :ba@
+  D03 -         UDR-3                         :bn@
+  D04 -         UDR-4                         :?@
+  D05 -         UDR-5                         :a@
+  D07 -         UDR-7                         :ba@
+  D08 -         UDR-8                         :ba@
+  D10 -         UDR-10                        :a@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    3
+User:    HOU50MF                                     Profile Information                                            Date:  2/21/17
+                                                               BSTN85                                               Time:  8:48:42
+________________________Preferred Vendor details________________________________________________
+ Vendor Type     Vendor Code                     Description                              Machine ID     Start Date       End Date
+

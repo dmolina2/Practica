@@ -1,0 +1,126 @@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    1
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BSTN86                                               Time: 11:57:32
+Profile Id . . . . . . : BSTN86             Company Description. . : BOSTON CONSULTING GROUP
+Start Date . . . . . . :  3/01/2016
+End Date . . . . . . . : 12/31/9999
+Version  . . . . . . . :   3                Low Fare > Gross Fare  : P                  Complex Cnt. . . . . . : 00
+OU ID  . . . . . . . . :                    Full Fare < Gross Amt  : F                  Default Refund Fares . : N
+Country Grouping . . . : LAC=L              PTSI Client. . . . . . : N                  AIM Indicators . . . . :
+Profile Id . . . . . . : BSTN86             Company Description. . : BOSTON CONSULTING GROUP
+                                                                                                                                   .
+______________________ Hotel/Car Info_______________________________________________________ Explanation Defaults___________________
+Default Hotel Rate       0       Max Hotel Rat          .00                     Air       Car      Hotel      Rail    Refund
+DEFAULT Car Rate         0       Max Car Rate           .00                                                             ZA
+Profile Id . . . . . . : BSTN86             Company Description. . : BOSTON CONSULTING GROUP
+                                                                                                                                   .
+__________________Mapping Information __________________________________________________________
+Source   Nmbr      Pattern                                     Str  End  Field       Description               Usage   CF#
+UDID        1       n@                                           1   15  EMP ID      EMPLOYEE ID                 S      5
+UDID        2       x@                                           1   24  PATPAR      PARTNER NON PARTNER         S     12
+UDID        3       n@                                           1   15  COST C      COST CENTER
+UDID        4       ?@                                           1   20  CSSDCC      CASE CODE                   S      1
+UDID        5       a@                                           1    8  ONOFFD      ONLINE OFFLINE INDICATOR    S      3
+UDID        7       a@                                           1    2  AIRRCO      AIR REASON CODE
+UDID        8       ba@                                          1    2  HOTRES      HOTEL REASON CODE
+UDID       10       a@                                           1   20  CNTRID      COUNTRY IDENTIFER           S     20
+FARES       1                                                    1    1  LOFARE      LOW FARE
+FARES       2                                                    1    1  FLFARE      FULL FARE
+                                                                                                                                   .
+___________________Edit Patterns Without Mapping________________________________________________
+Source   Nmbr      Pattern
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    2
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BSTN86                                               Time: 11:57:32
+GOVERNMENT  1       b?@
+GOVERNMENT  2       b?@
+GOVERNMENT  3       b?@
+GOVERNMENT  4       b?@
+GOVERNMENT  5       b?@
+GOVERNMENT  6       b?@
+GOVERNMENT  7       b?@
+GOVERNMENT  8       b?@
+GOVERNMENT  9       b?@
+SORT        1       b?@
+SORT        2       b?@
+SORT        3       b?@
+SORT        4       b?@
+SORT        5       b?@
+SORT        6       b?@
+SORT        7       b?@
+SORT        8       b?@
+SORT        9       b?@
+STATEMENT   1       b?@
+                                                                                                                                   .
+________________________Explanation Codes_______________________________________________________
+       Type     Code                               Description                                     Policy     Operator
+          A      DA            DECLINED DUE TO VENDOR PREFERENCE
+          A      EX            EXCHANGE
+          A      LA            LOWEST ACCEPTED WITHIN POLICY
+          A      PA            REFUSED DUE TO PENALTIES
+          A      TA            REFUSED DUE TO TIMING
+          A      UA            Y-UP
+          A      ZA            REFUND
+          C      AC            ACCEPTED PREFERRED CAR VENDOR RATE
+          C      RC            REFUSED PREFERRED CAR VENDOR RATE
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    3
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BSTN86                                               Time: 11:57:32
+          H      AH            APPROVED HOTEL AT THE NEGOTIATED RATE USED
+          H      BH            PREFERRED HOTEL IS TO FAR FROM BUSINESS LOCATION
+          H      DH            DECLINED DUE TO VENDOR PREFERENCE                                                LT
+          H      EH            ATTENDING EXTERNAL COMPANY MEETING/EVENT/CONFERENC
+          H      IH            ATTEND INTERNAL MEETING/EVENT UNDER 20 ATTENDEES
+          H      KH            REFUSED PREFERRED HOTEL/RATE - NO REASON OR OTHER
+          H      LH            LOWEST ACCEPTED WITHIN POLICY                                                    EQ
+          H      MH            ATTEND INTERNAL MEETING/EVENT OVER 20 ATTENDEES
+          H      NH            APPROVED HOTEL WOULD NOT HONOR NEGOTIATED RATE
+          H      RH            BOOKED A HOTEL/RATE TRAVELING WITH CLIENT
+                                                                                                                                   .
+________________________Valid/Invalid Values____________________________________________________
+Field     Type      Comparison  Values
+                                                                                                                                   .
+________________________Customer Grouping Detail________________________________________________
+  Order Type     Seq   Start   End   Field ID   CF#  Custom Field Description
+                                                                                                                                   .
+________________________Translation Field Definition____________________________________________
+  Type   Seq   Start   End   Field ID   CF#     Custom Field Description
+                                                                                                                                   .
+_____________________________________Edit Pattern_______________________________________________
+ Map ID        Map Desc                       Edit Pattern
+  D01 -         UDR-1                         :n@
+  D02 -         UDR-2                         :x@
+  D03 -         UDR-3                         :n@
+  D04 -         UDR-4                         :?@
+  D05 -         UDR-5                         :a@
+  D07 -         UDR-7                         :a@
+  D08 -         UDR-8                         :ba@
+  D10 -         UDR-10                        :a@
+  G01 -         GOVERNMT-1                    :b?@
+  G02 -         GOVERNMT-2                    :b?@
+  G03 -         GOVERNMT-3                    :b?@
+  G04 -         GOVERNMT-4                    :b?@
+  G05 -         GOVERNMT-5                    :b?@
+  G06 -         GOVERNMT-6                    :b?@
+  G07 -         GOVERNMT-7                    :b?@
+  G08 -         GOVERNMT-8                    :b?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    4
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BSTN86                                               Time: 11:57:32
+  G09 -         GOVERNMT-9                    :b?@
+  O01 -         SORT-1                        :b?@
+  O02 -         SORT-2                        :b?@
+  O03 -         SORT-3                        :b?@
+  O04 -         SORT-4                        :b?@
+  O05 -         SORT-5                        :b?@
+  O06 -         SORT-6                        :b?@
+  O07 -         SORT-7                        :b?@
+  O08 -         SORT-8                        :b?@
+  O09 -         SORT-9                        :b?@
+  S01 -         STATEMENT                     :b?@
+Program: PLS290                                     GLOBAL BUSINESS TRAVEL - E3                                     Page:    5
+User:    HOU50MF                                     Profile Information                                            Date:  4/28/17
+                                                               BSTN86                                               Time: 11:57:32
+________________________Preferred Vendor details________________________________________________
+ Vendor Type     Vendor Code                     Description                              Machine ID     Start Date       End Date
+
